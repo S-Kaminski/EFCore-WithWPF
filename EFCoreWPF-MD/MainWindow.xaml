@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:EFCoreWPF_MD"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800"
+        Loaded="MainWindow_OnLoaded"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
@@ -67,11 +68,12 @@
                 </DataGrid.Columns>
             </DataGrid>
             <Button
-                Style="{StaticResource MaterialDesignRaisedAccentButton}"
-                materialDesign:ButtonAssist.CornerRadius="25 25 0 0"
-                ToolTip="Save commited changes to Sqlite file" Width="131">
-                <TextBlock Text="Save changes" />
-            </Button>
+                Name="SaveChngsBttn"
+                Style="{StaticResource MaterialDesignFlatButton}"
+                Click="SaveChngsBttn_OnClick"
+                ToolTip="MaterialDesignFlatButton"
+                Content="SAVE" Width="79" />
+
         </StackPanel>
     </Grid>
 </Window>
