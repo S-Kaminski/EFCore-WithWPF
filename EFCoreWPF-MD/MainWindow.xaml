@@ -47,6 +47,31 @@
                         Header="Name" Width="*"/>
                 </DataGrid.Columns>
             </DataGrid>
+
+            <DataGrid x:Name="productsDataGrid"
+                      AutoGenerateColumns="False"
+                      EnableRowVirtualization="True"
+                      ItemsSource="{Binding Source={StaticResource categoryViewSource}}"
+                      RowDetailsVisibilityMode="VisibleWhenSelected"
+                      RenderTransformOrigin="0.488,0.251">
+                <DataGrid.Columns>
+                    <materialDesign:DataGridTextColumn 
+                        Binding="{Binding CategoryId}"
+                        Header="Category Id" Width="SizeToHeader" IsReadOnly="True"/>
+                    <materialDesign:DataGridTextColumn
+                        Binding="{Binding ProductId}"
+                        Header="Product Id" Width="SizeToHeader" IsReadOnly="True"/>
+                    <materialDesign:DataGridTextColumn
+                        Binding="{Binding Name}"
+                        Header="Name" Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Button
+                Style="{StaticResource MaterialDesignRaisedAccentButton}"
+                materialDesign:ButtonAssist.CornerRadius="25 25 0 0"
+                ToolTip="Save commited changes to Sqlite file" Width="131">
+                <TextBlock Text="Save changes" />
+            </Button>
         </StackPanel>
     </Grid>
 </Window>
