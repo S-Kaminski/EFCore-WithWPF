@@ -1,0 +1,5 @@
+C:\Users\User\source\repos\EFCoreWPF-MD.Demo\EFCoreWPF-MD\obj\Debug\netcoreapp3.1\EFCoreWPF-MD.csprojAssemblyReference.cache
+C:\Users\User\source\repos\EFCoreWPF-MD.Demo\EFCoreWPF-MD\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+C:\Users\User\source\repos\EFCoreWPF-MD.Demo\EFCoreWPF-MD\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\User\source\repos\EFCoreWPF-MD.Demo\EFCoreWPF-MD\obj\Debug\netcoreapp3.1\EFCoreWPF-MD_MarkupCompile.cache
+C:\Users\User\source\repos\EFCoreWPF-MD.Demo\EFCoreWPF-MD\obj\Debug\netcoreapp3.1\EFCoreWPF-MD_MarkupCompile.lref
