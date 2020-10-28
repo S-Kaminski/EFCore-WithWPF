@@ -23,12 +23,30 @@
             <Setter Property="TextBlock.FontFamily" Value="Lato" />
             <Setter Property="TextBlock.Foreground" Value="#666666" />
         </Style>
+        <CollectionViewSource x:Key="categoryViewSource"/>
+        <CollectionViewSource 
+            x:Key="categoryProductsViewSource"
+            Source="{Binding Products, Source={StaticResource categoryViewSource}}"/>
     </Window.Resources>
     <Grid>
         <StackPanel>
             <materialDesign:Card Padding="32" Margin="16">
                 <TextBlock Style="{DynamicResource MaterialDesignHeadline6TextBlock}">EFCore in WPF demo</TextBlock>
             </materialDesign:Card>
+            <DataGrid x:Name="categoryDataGrid"
+                      AutoGenerateColumns="False"
+                      EnableRowVirtualization="True"
+                      ItemsSource="{Binding Source={StaticResource categoryViewSource}}"
+                      RowDetailsVisibilityMode="VisibleWhenSelected">
+                <DataGrid.Columns>
+                    <materialDesign:DataGridTextColumn 
+                        Binding="{Binding CategoryId}"
+                        Header="Category Id" Width="SizeToHeader" IsReadOnly="True"/>
+                    <materialDesign:DataGridTextColumn
+                        Binding="{Binding Name}"
+                        Header="Name" Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
         </StackPanel>
     </Grid>
 </Window>
